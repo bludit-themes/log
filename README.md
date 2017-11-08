@@ -1,5 +1,5 @@
 # Log theme for Bludit
-This theme is based on Future Imperfect by [HTML5 UP](https://html5up.net).
+Theme is based on Future Imperfect by [HTML5 UP](https://html5up.net).
 
 ## Compatible
 - Bludit v2.0.x
