@@ -22,8 +22,7 @@
 	echo '<![endif]-->';
 
 	echo Theme::css('assets/css/bludit.css');
+	echo Theme::css('assets/css/all.css');
 
-	echo Theme::fontAwesome();
-
-        Theme::plugins('siteHead');
+    Theme::plugins('siteHead');
 ?>

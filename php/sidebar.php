@@ -1,8 +1,8 @@
 <!-- Intro -->
 <section id="intro">
 	<header>
-		<h2><?php echo $Site->title() ?></h2>
-		<p><?php echo $Site->slogan() ?></p>
+		<h2><?php echo $site->title() ?></h2>
+		<p><?php echo $site->slogan() ?></p>
 	</header>
 </section>
 
@@ -12,24 +12,36 @@
 <section id="footer">
 	<ul class="icons">
 	<?php
-		if($Site->twitter()) {
-			echo '<li><a href="'.$Site->twitter().'" class="fa-twitter"><span class="label">Twitter</span></a></li>';
+		if($site->twitter()) {
+			echo '<li><a href="'.$site->twitter().'" class="fab fa-twitter"><span class="label">Twitter</span></a></li>';
 		}
 
-		if($Site->facebook()) {
-			echo '<li><a href="'.$Site->facebook().'" class="fa-facebook"><span class="label">Facebook</span></a></li>';
+		if($site->facebook()) {
+			echo '<li><a href="'.$site->facebook().'" class="fab fa-facebook"><span class="label">Facebook</span></a></li>';
 		}
 
-		if($Site->googlePlus()) {
-			echo '<li><a href="'.$Site->googlePlus().'" class="fa-google"><span class="label">Google+</span></a></li>';
+		if($site->codepen()) {
+			echo '<li><a href="'.$site->codepen().'" class="fab fa-codepen"><span class="label">CodePen</span></a></li>';
 		}
 
-		if($Site->instagram()) {
-			echo '<li><a href="'.$Site->instagram().'" class="fa-instagram"><span class="label">Instagram</span></a></li>';
+		if($site->googlePlus()) {
+			echo '<li><a href="'.$site->googlePlus().'" class="fab fa-google"><span class="label">Google+</span></a></li>';
 		}
 
-		if($Site->github()) {
-			echo '<li><a href="'.$Site->github().'" class="fa-github"><span class="label">Github</span></a></li>';
+		if($site->instagram()) {
+			echo '<li><a href="'.$site->instagram().'" class="fab fa-instagram"><span class="label">Instagram</span></a></li>';
+		}
+
+		if($site->gitlab()) {
+			echo '<li><a href="'.$site->gitlab().'" class="fab fa-gitlab"><span class="label">GitLab</span></a></li>';
+		}
+
+		if($site->github()) {
+			echo '<li><a href="'.$site->github().'" class="fab fa-github"><span class="label">GitHub</span></a></li>';
+		}
+
+		if($site->linkedin()) {
+			echo '<li><a href="'.$site->linkedin().'" class="fab fa-linkedin"><span class="label">LinkedIn</span></a></li>';
 		}
 
 		if( $plugins['all']['pluginRSS']->installed() ) {
@@ -41,5 +53,5 @@
 		}
 	?>
 	</ul>
-	<p class="copyright"><?php echo $Site->footer() ?> | <a href="http://www.bludit.com">BLUDIT</a></p>
+	<p class="copyright"><?php echo $site->footer() ?> | <a href="http://www.bludit.com">BLUDIT</a></p>
 </section>

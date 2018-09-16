@@ -1,5 +1,5 @@
 <!-- Show each post on this page -->
-<?php foreach ($pages as $Page): ?>
+<?php foreach ($content as $page): ?>
 
 <article class="post">
 
@@ -9,41 +9,41 @@
 	<!-- Post's header -->
 	<header>
 		<div class="title">
-			<h1><a href="<?php echo $Page->permalink() ?>"><?php echo $Page->title() ?></a></h1>
-			<p><?php echo $Page->description() ?></p>
+			<h1><a href="<?php echo $page->permalink() ?>"><?php echo $page->title() ?></a></h1>
+			<p><?php echo $page->description() ?></p>
 		</div>
 		<div class="meta">
 	                <?php
 	                	// Get the user who created the post.
-	                	$User = $Page->user();
+	                	$User = $page->user();
 
 	                	// Default author is the username.
 	                	$author = $User->username();
 
 	                	// If the user complete the first name or last name this will be the author.
-				if( Text::isNotEmpty($User->firstName()) || Text::isNotEmpty($User->lastName()) ) {
-					$author = $User->firstName().' '.$User->lastName();
-				}
+						if( Text::isNotEmpty($User->firstName()) || Text::isNotEmpty($User->lastName()) ) {
+							$author = $User->firstName().' '.$User->lastName();
+						}
 			?>
-			<time class="published" datetime="<?php echo $Page->date() ?>"><?php echo $Page->date() ?></time>
+			<time class="published" datetime="<?php echo $page->date() ?>"><?php echo $page->date() ?></time>
 		</div>
 	</header>
 
 	<!-- Cover Image -->
 	<?php
-		if($Page->coverImage()) {
-			echo '<a href="'.$Page->permalink().'" class="image featured"><img src="'.$Page->coverImage().'" alt="Cover Image"></a>';
+		if($page->coverImage()) {
+			echo '<a href="'.$page->permalink().'" class="image featured"><img src="'.$page->coverImage().'" alt="Cover Image"></a>';
 		}
 	?>
 
 	<!-- Post's content, the first part if has pagebrake -->
-	<?php echo $Page->content(false) ?>
+	<?php echo $page->content(false) ?>
 
 	<!-- Post's footer -->
 	<footer>
 
 		<!-- Read more button -->
-	        <?php if($Page->readMore()) { ?>
+	        <?php if($page->readMore()) { ?>
 		<ul class="actions">
 			<li><a href="<?php echo $Page->permalink() ?>" class="button"><?php $Language->p('Read more') ?></a></li>
 		</ul>
@@ -52,10 +52,10 @@
 		<!-- Post's tags -->
 		<ul class="stats">
 		<?php
-			$tags = $Page->tags(true);
+			$pageTags = $page->tags(true);
 
-			foreach($tags as $tagKey=>$tagName) {
-				echo '<li><a href="'.HTML_PATH_ROOT.$Url->filters('tag').'/'.$tagKey.'">'.$tagName.'</a></li>';
+			foreach($pageTags as $tagKey=>$tagName) {
+				echo '<li><a href="'.HTML_PATH_ROOT.$url->filters('tag').'/'.$tagKey.'">'.$tagName.'</a></li>';
 			}
 		?>
 		</ul>
@@ -69,11 +69,12 @@
 <?php endforeach; ?>
 
 <!-- Pagination -->
-<ul class="actions pagination">
+<?php if (Paginator::numberOfPages()>1): ?>
+	<ul class="actions pagination">
 
 	<!-- Show previus page link -->
 	<?php if(Paginator::showPrev()) { ?>
-		<li><a href="<?php echo Paginator::prevPageUrl() ?>" class="button big previous"><?php $Language->p('Previous Page') ?></a></li>
+		<li><a href="<?php echo Paginator::previousPageUrl() ?>" class="button big previous"><?php $Language->p('Previous Page') ?></a></li>
     <?php } ?>
 
 	<!-- Show next page link -->
@@ -81,4 +82,5 @@
 		<li><a href="<?php echo Paginator::nextPageUrl() ?>" class="button big next"><?php $Language->p('Next Page') ?></a></li>
     <?php } ?>
 
-</ul>
+	</ul>
+<?php endif ?>

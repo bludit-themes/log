@@ -6,20 +6,20 @@
 	<!-- Post's header -->
 	<header>
 		<div class="title">
-			<h1><a href="<?php echo $Page->permalink() ?>"><?php echo $Page->title() ?></a></h1>
-			<p><?php echo $Page->description() ?></p>
+			<h1><?php echo $page->title() ?></h1>
+			<p><?php echo $page->description() ?></p>
 		</div>
 	</header>
 
 	<!-- Cover Image -->
 	<?php
-		if($Page->coverImage()) {
-			echo '<a href="'.$Page->permalink().'" class="image featured"><img src="'.$Page->coverImage().'" alt="Cover Image"></a>';
+		if($page->coverImage()) {
+			echo '<a href="'.$page->permalink().'" class="image featured"><img src="'.$page->coverImage().'" alt="Cover Image"></a>';
 		}
 	?>
 
 	<!-- Post's content, the first part if has pagebrake -->
-	<?php echo $Page->content() ?>
+	<?php echo $page->content() ?>
 
 	<!-- Plugins Page End -->
 	<?php Theme::plugins('pageEnd') ?>

@@ -15,7 +15,7 @@
 			<nav class="links">
 				<ul>
 				<?php
-					foreach ($staticPages as $staticPage) {
+					foreach ($staticContent as $staticPage) {
 						echo '<li><a href="'.$staticPage->permalink().'">'.$staticPage->title().'</a></li>';
 					}
 				?>
@@ -23,7 +23,7 @@
 			</nav>
 			<nav class="main">
 				<ul>
-					<li class="menu"><a class="fa-bars" href="#menu">Menu</a></li>
+					<li class="menu"><a class="fas fa-bars" href="#menu">Menu</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -36,9 +36,9 @@
 				<ul class="links">
 				<?php
 					echo '<li>';
-					echo '<a href="'.$Site->url().'">';
+					echo '<a href="'.$site->url().'">';
 					echo '<h3>'.$Language->get('Home page').'</h3>';
-					echo '<p>'.$Site->description().'</p>';
+					echo '<p>'.$site->description().'</p>';
 					echo '</a>';
 					echo '</li>';
 

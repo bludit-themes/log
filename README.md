@@ -2,7 +2,7 @@
 Theme based on Future Imperfect by [HTML5 UP](https://html5up.net).
 
 ## Compatible
-- Bludit v2.x
+- Bludit v3.x
 
 ## Author
 - Diego
