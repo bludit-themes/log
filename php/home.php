@@ -37,8 +37,8 @@
 	?>
 
 	<!-- Post's content, the first part if has pagebrake -->
-	<?php echo $page->content(false) ?>
-
+	<?php echo $page->contentBreak(); ?>
+	
 	<!-- Post's footer -->
 	<footer>
 
