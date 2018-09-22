@@ -13,35 +13,35 @@
 	<ul class="icons">
 	<?php
 		if($site->twitter()) {
-			echo '<li><a href="'.$site->twitter().'" class="fab fa-twitter"><span class="label">Twitter</span></a></li>';
+			echo '<li><a href="'.$site->twitter().'" class="fa-twitter"><span class="label">Twitter</span></a></li>';
 		}
 
 		if($site->facebook()) {
-			echo '<li><a href="'.$site->facebook().'" class="fab fa-facebook"><span class="label">Facebook</span></a></li>';
+			echo '<li><a href="'.$site->facebook().'" class="fa-facebook"><span class="label">Facebook</span></a></li>';
 		}
 
 		if($site->codepen()) {
-			echo '<li><a href="'.$site->codepen().'" class="fab fa-codepen"><span class="label">CodePen</span></a></li>';
+			echo '<li><a href="'.$site->codepen().'" class="fa-codepen"><span class="label">CodePen</span></a></li>';
 		}
 
 		if($site->googlePlus()) {
-			echo '<li><a href="'.$site->googlePlus().'" class="fab fa-google"><span class="label">Google+</span></a></li>';
+			echo '<li><a href="'.$site->googlePlus().'" class="fa-google"><span class="label">Google+</span></a></li>';
 		}
 
 		if($site->instagram()) {
-			echo '<li><a href="'.$site->instagram().'" class="fab fa-instagram"><span class="label">Instagram</span></a></li>';
+			echo '<li><a href="'.$site->instagram().'" class="fa-instagram"><span class="label">Instagram</span></a></li>';
 		}
 
 		if($site->gitlab()) {
-			echo '<li><a href="'.$site->gitlab().'" class="fab fa-gitlab"><span class="label">GitLab</span></a></li>';
+			echo '<li><a href="'.$site->gitlab().'" class="fa-gitlab"><span class="label">GitLab</span></a></li>';
 		}
 
 		if($site->github()) {
-			echo '<li><a href="'.$site->github().'" class="fab fa-github"><span class="label">GitHub</span></a></li>';
+			echo '<li><a href="'.$site->github().'" class="fa-github"><span class="label">GitHub</span></a></li>';
 		}
 
 		if($site->linkedin()) {
-			echo '<li><a href="'.$site->linkedin().'" class="fab fa-linkedin"><span class="label">LinkedIn</span></a></li>';
+			echo '<li><a href="'.$site->linkedin().'" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>';
 		}
 
 		if( $plugins['all']['pluginRSS']->installed() ) {
