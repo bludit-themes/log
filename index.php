@@ -23,7 +23,7 @@
 			</nav>
 			<nav class="main">
 				<ul>
-					<li class="menu"><a class="fas fa-bars" href="#menu">Menu</a></li>
+					<li class="menu"><a class="fa-bars" href="#menu">Menu</a></li>
 				</ul>
 			</nav>
 		</header>
