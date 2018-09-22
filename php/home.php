@@ -45,7 +45,7 @@
 		<!-- Read more button -->
 	        <?php if($page->readMore()) { ?>
 		<ul class="actions">
-			<li><a href="<?php echo $Page->permalink() ?>" class="button"><?php $Language->p('Read more') ?></a></li>
+			<li><a href="<?php echo $page->permalink() ?>" class="button"><?php $Language->p('Read more') ?></a></li>
 		</ul>
 		<?php } ?>
 
