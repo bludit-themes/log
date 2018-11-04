@@ -43,6 +43,10 @@
 		if($site->linkedin()) {
 			echo '<li><a href="'.$site->linkedin().'" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>';
 		}
+		
+		if($site->mastodon()) {
+			echo '<li><a href="'.$site->mastodon().'" class="fa-mastodon"><span class="label">Mastodon</span></a></li>';
+		}
 
 		if( $plugins['all']['pluginRSS']->installed() ) {
 			echo '<li><a href="'.DOMAIN_BASE.'rss.xml'.'" class="fa-rss"><span class="label">RSS</span></a></li>';

@@ -37,7 +37,7 @@
 				<?php
 					echo '<li>';
 					echo '<a href="'.$site->url().'">';
-					echo '<h3>'.$Language->get('Home page').'</h3>';
+					echo '<h3>'.$L->get('Homepage').'</h3>';
 					echo '<p>'.$site->description().'</p>';
 					echo '</a>';
 					echo '</li>';

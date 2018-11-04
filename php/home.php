@@ -45,7 +45,7 @@
 		<!-- Read more button -->
 	        <?php if($page->readMore()) { ?>
 		<ul class="actions">
-			<li><a href="<?php echo $page->permalink() ?>" class="button"><?php $Language->p('Read more') ?></a></li>
+			<li><a href="<?php echo $page->permalink() ?>" class="button"><?php $L->p('Read more') ?></a></li>
 		</ul>
 		<?php } ?>
 
@@ -74,12 +74,12 @@
 
 	<!-- Show previus page link -->
 	<?php if(Paginator::showPrev()) { ?>
-		<li><a href="<?php echo Paginator::previousPageUrl() ?>" class="button big previous"><?php $Language->p('Previous Page') ?></a></li>
+		<li><a href="<?php echo Paginator::previousPageUrl() ?>" class="button big previous"><?php $L->p('Previous Page') ?></a></li>
     <?php } ?>
 
 	<!-- Show next page link -->
 	<?php if(Paginator::showNext()) { ?>
-		<li><a href="<?php echo Paginator::nextPageUrl() ?>" class="button big next"><?php $Language->p('Next Page') ?></a></li>
+		<li><a href="<?php echo Paginator::nextPageUrl() ?>" class="button big next"><?php $L->p('Next Page') ?></a></li>
     <?php } ?>
 
 	</ul>
