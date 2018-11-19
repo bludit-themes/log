@@ -24,10 +24,6 @@
 			echo '<li><a href="'.$site->codepen().'" class="fa-codepen"><span class="label">CodePen</span></a></li>';
 		}
 
-		if($site->googlePlus()) {
-			echo '<li><a href="'.$site->googlePlus().'" class="fa-google"><span class="label">Google+</span></a></li>';
-		}
-
 		if($site->instagram()) {
 			echo '<li><a href="'.$site->instagram().'" class="fa-instagram"><span class="label">Instagram</span></a></li>';
 		}
